@@ -24,7 +24,6 @@ gcloud config set project [your-project-id]
 gcloud config set compute/zone us-central1-a
 ```
 
-
 ## Setup python environment and sample code
 
 Follow commands below to install required python packages and download a dataflow pipeline code.
@@ -80,7 +79,7 @@ Then, you can run the pipeline by executing this command:
 bash embeddings_extraction/run.sh
 ```
 
-This executes the embeddinga_extraction/run.sh script, which includes the following commands:
+This executes the embeddings_extraction/run.sh script, which includes the following commands:
 
 ```bash
 # Remove working directories before running dataflow job.
