@@ -1,0 +1,35 @@
+runtime: python
+env: flex
+entrypoint: gunicorn --bind :$PORT main:app --timeout 1800
+
+runtime_config:
+  python_version: 2
+
+service: wiki-semantic-search
+
+readiness_check:
+  path: "/readiness_check"
+  check_interval_sec: 10
+  timeout_sec: 5
+  failure_threshold: 2
+  success_threshold: 2
+  app_start_timeout_sec: 1800
+
+#automatic_scaling:
+#  min_num_instances: 3
+#  max_num_instances: 5
+
+manual_scaling:
+  instances: 10
+
+resources:
+  cpu: 4
+  memory_gb: 8
+  disk_size_gb: 50
+
+skip_files:
+- ^(.*/)?\..*$
+- ^(.*/)?.*\_test.py$
+- ^(.*/)?.*\.index$
+- ^(.*/)?.*\.mapping$
+- ^(.*/)?.*\.py[co]$
