@@ -40,9 +40,9 @@ def search():
   try:
     query = request.args.get('query')
     show = request.args.get('show')
-    show = 10 if show is None else show
+    show = '10' if show is None else show
 
-    is_valid, error = validate_request(query, str(show))
+    is_valid, error = validate_request(query, show)
 
     if not is_valid:
       results = error
