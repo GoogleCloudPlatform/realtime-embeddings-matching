@@ -1,8 +1,8 @@
 # Text semantic search
 
-This shows an example of how to build an end-to-end real-time text semantic search:
+This example shows how to build an end-to-end real-time text semantic search:
 1. Extract text embeddings of Wikipedia titles from BigQuery, 
-using the [Universal Sentence Encoder](https://tfhub.dev/google/universal-sentence-encoder/2) module , via Cloud Dataflow. 
+using the [Universal Sentence Encoder](https://tfhub.dev/google/universal-sentence-encoder/2) module, via Cloud Dataflow. 
 2. Build an approximate similarity matching index using Spotify’s [Annoy](https://github.com/spotify/annoy) library, via Cloud ML Engine.
 3. Serve the index for real-time search queries in a [Flask](http://flask.pocoo.org/) web application, via Google AppEngine.
 
