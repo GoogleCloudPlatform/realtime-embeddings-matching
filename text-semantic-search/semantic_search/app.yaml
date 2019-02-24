@@ -1,6 +1,6 @@
 runtime: python
 env: flex
-entrypoint: gunicorn --bind :$PORT main:app --timeout 1800
+entrypoint: gunicorn --bind :$PORT main:app --timeout 1800 --workers 4 --worker-class sync --threads 8 --preload
 
 runtime_config:
   python_version: 2
@@ -20,7 +20,7 @@ readiness_check:
 #  max_num_instances: 5
 
 manual_scaling:
-  instances: 10
+  instances: 1
 
 resources:
   cpu: 4
