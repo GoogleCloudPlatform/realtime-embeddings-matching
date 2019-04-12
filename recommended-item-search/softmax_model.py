@@ -22,7 +22,7 @@ import tensorflow as tf
 
 def get_feature_columns(metadata_path, embeddings_dim):
   def _get_num_bucket():
-    with open(metadata_path, 'rb') as f:
+    with tf.io.gfile.GFile(metadata_path, 'rb') as f:
       metadata = pickle.load(f)
     return metadata['N']
     
