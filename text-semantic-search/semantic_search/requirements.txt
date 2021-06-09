@@ -1,4 +1,4 @@
-pip==19.0.3
+pip==19.2
 future==0.17.1
 httplib2==0.12.1
 oauth2client==4.1.3
