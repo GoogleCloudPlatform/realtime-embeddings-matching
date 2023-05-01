@@ -8,5 +8,5 @@ google-cloud-datastore==1.7.3
 tensorflow==1.12.0
 tensorflow-hub==0.2.0
 annoy==1.15.0
-Flask==1.0.2
+Flask==2.3.2
 gunicorn==19.9.0
