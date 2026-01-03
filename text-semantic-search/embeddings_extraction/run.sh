@@ -55,8 +55,8 @@ MACHINE_TYPE=n1-highmem-2
 # Cleaning working and oputput directories before running the Dataflow job
 echo "Cleaning working and output directories..."
 
-gsutil -m rm -r "${DF_JOB_DIR}"
-gsutil -m rm -r "${OUTPUT_PREFIX}"
+gcloud storage rm --recursive "${DF_JOB_DIR}"
+gcloud storage rm --recursive "${OUTPUT_PREFIX}"
 
 echo "Running the Dataflow job..."
 
